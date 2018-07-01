@@ -1,0 +1,43 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "PttChrome",
+  "version": "1.5.3",
+
+  "description": "PttChrome provides telnet connections to ptt.cc.",
+  "icons": {
+    "16": "icon_16.png",
+    "128": "icon_128.png"
+  },
+  
+  "default_locale": "en_US",
+  "minimum_chrome_version": "42",
+  "app": {
+    "background": {
+      "scripts": [
+        "fontBase64.js",
+        "socketClient.js",
+        "background.js"
+      ]
+    }
+  },
+
+  "sockets": {
+    "tcp": {
+      "connect": "*:*"
+    }
+  },
+
+  "externally_connectable": {
+    "matches": ["*://iamchucky.github.io/*"]
+  },
+
+  "permissions": [
+    "webview",
+    "clipboardRead",
+    "clipboardWrite",
+    "storage",
+    "browser"
+  ]
+}
