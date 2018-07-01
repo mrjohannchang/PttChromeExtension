@@ -30,7 +30,7 @@
   },
 
   "externally_connectable": {
-    "matches": ["*://iamchucky.github.io/*"]
+    "matches": ["*://changyuheng.github.io/*"]
   },
 
   "permissions": [
